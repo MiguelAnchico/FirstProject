@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+    <div id="ventana-flotante">
+        <div id="contenido-ventana">
+            <div id="contenedor-imagen" onclick="reproducir()">
+            </div>
+            <div id="contenedor-contenido">
+                <img src="./iconos/simbolo-x.png"  onclick="cerarVentana()">
+                <h3 id="titulo"></h3>
+                <p id="descripcion"></p>
+            </div>
+        </div>
+        <div id="fondo-negro">
+
+        </div>
+    </div>
+    <div id="inicio">
+        <h1>Escucha, Disfruta <br>
+            y aprende
+        </h1>
+        <a href="#orquesta">
+        <button type="button">
+            Empieza
+        </button>
+        </a>
+    </div>
+    <div id="contenido">
+        <h2>Como funciona</h2>
+        <div id="iconos">
+            <div id="borde">
+                <img class="icono" src="./iconos/escuchando.png">
+                <p>Tomate el tiempo de escuchar cada tipo de instrumento</p>
+            </div>
+            <div>
+                <img class="icono" src="./iconos/ojo.png">
+                <p>Relaciona los sonidos con sus formas y lugares en una orquesta</p>
+            </div>
+        </div>
+        <h2 id="orquesta">Escoge un instrumento de la orquesta</h2>
+        <div id="esquema-orquesta" >
+            <img src="./imagenes/esquema.png">
+            <div id="arpa" onclick="mostrarContenido(0, '90%','Arpa', 0, 0)" class="selector-icono">
+                <img src="./iconos/arpa.png">
+                <h3>Arpas</h3>
+            </div>
+            <div id="flauta1" onclick="mostrarContenido(1, '50%','Flauta', 1, 1)" class="selector-icono">
+                <img src="./iconos/flauta.png">
+                <h3>Flautas</h3>
+            </div>
+            <div id="trompeta1" onclick="mostrarContenido(2, '50%','Trompeta', 2, 2)" class="selector-icono">
+                <img src="./iconos/trompeta.png">
+                <h3>Trompetas</h3>
+            </div>
+            <div id="percusion1" onclick="mostrarContenido(3, '50%','Tambor', 3, 3)" class="selector-icono">
+                <img src="./iconos/tambor.png">
+                <h3>Percusión</h3>
+            </div>
+            <div id="flauta2" onclick="mostrarContenido(1, '50%','Flauta', 1, 1)" class="selector-icono">
+                <img src="./iconos/flauta.png">
+                <h3>Flautas</h3>
+            </div>
+            <div id="trompeta2" onclick="mostrarContenido(2, '50%','Trompeta', 2 , 2)" class="selector-icono">
+                <img src="./iconos/trompeta.png">
+                <h3>Trompetas</h3>
+            </div>
+            <div id="percusion2" onclick="mostrarContenido(3, '50%','Tambor', 3, 3)" class="selector-icono">
+                <img src="./iconos/tambor.png">
+                <h3>Percusión</h3>
+            </div>
+            <div id="contrabajo" onclick="mostrarContenido(4, '50%','Contrabajo', 4, 4)" class="selector-icono">
+                <img src="./iconos/bajo.png">
+                <h3>Contrabajo</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/logica.js">
+
+    </script>
+</body>
+</html>

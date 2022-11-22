@@ -1,0 +1,422 @@
+@font-face {
+    font-family: "Rosario";
+    src: url("../fuentes/Rosario-Light.otf");
+}
+
+@font-face {
+    font-family: "Italianno";
+    src: url("../fuentes/Italianno-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Famili";
+    src: url("../fuentes/Family\ Home.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFEEDB;
+}
+
+#inicio{
+    background-image: url("../imagenes/background.jpg");
+    background-position-x: 50%;
+    background-position-y: 50%;
+    width: 100%;
+    height: 1100px;
+
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
+
+    justify-items: center;
+    align-items: center;
+}
+
+#inicio h1{
+    padding-top: 400px;
+    font-family: "Famili";
+    font-size: 100px;
+    text-align: center;
+    color: #DFB98D;
+
+    text-shadow: 0.07em 0.01em 0 #122022;
+}
+
+#inicio a{
+    width: 25%;
+    height: 15%;
+    min-width: 200px;
+    min-height: 60px;
+    max-width: 400px;
+    max-height: 180px;
+}
+
+#inicio button{
+    font-family: "Rosario";
+    font-size: 160%;
+    width: 100%;
+    height: 100%;
+
+    background-color: #122022;
+    color: #FFEEDB;
+    border: none;
+    border-radius:8px;
+}
+
+#inicio button:hover{
+    cursor: pointer;
+    background-color: #1e3336;
+    transition: all 0.5s;
+}
+#contenido{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 0.1fr 1fr 0.1fr 1fr;
+    grid-template-columns: 1fr;
+    font-size: 60px;
+}
+
+#contenido h2{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: "Italianno";
+}
+
+#iconos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+    height: 100%;
+}
+
+#iconos .icono{
+    width: 40%;
+}
+
+#iconos > div{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 50px;
+    grid-template-rows: 0.4fr 1fr;
+}
+
+#iconos > div > p{
+    font-family: "Rosario";
+    text-align: center;
+    font-size: 40px;
+    padding: 0 40;
+}
+
+#iconos > #borde{
+    border-right: 5px solid #122022;
+}
+
+#esquema-orquesta img{
+    width: 100%;
+    position: absolute;
+}
+
+#esquema-orquesta{
+    position: relative;
+}
+
+.selector-icono{
+    width: 10vw;
+    height: 15vw;
+    position: absolute;
+
+    display: flex;
+}
+#arpa{
+    top: 40vw;
+    left: 10vw;
+}
+
+#flauta1{
+    top: 30vw;
+    left: 25vw;
+}
+
+#trompeta1{
+    top: 17vw;
+    left: 17vw;
+}
+
+#percusion1{
+    top: 6vw;
+    left: 25vw;
+}
+
+#percusion2{
+    top: 6vw;
+    left: 43vw;
+}
+
+#trompeta2{
+    top: 17vw;
+    left: 50vw;
+}
+
+#flauta2{
+    top: 30vw;
+    left: 42vw;
+}
+
+#contrabajo{
+    top: 40vw;
+    left: 60vw;
+}
+
+#arpa, #flauta1, #flauta2, #trompeta1, #trompeta2, #percusion1, #percusion2, #contrabajo{
+    filter: invert(76%) sepia(54%) saturate(230%) hue-rotate(350deg) brightness(91%) contrast(92%);
+    cursor: pointer;
+}
+
+#arpa:hover, #flauta1:hover, #flauta2:hover, #trompeta1:hover, #trompeta2:hover, #percusion1:hover, #percusion2:hover, #contrabajo:hover{
+    cursor: pointer;
+    filter: invert(93%) sepia(8%) saturate(1178%) hue-rotate(317deg) brightness(103%) contrast(106%);
+}
+
+#arpa h3, #flauta1 h3, #flauta2 h3, #trompeta1 h3, #trompeta2 h3, #percusion1 h3, #percusion2 h3, #contrabajo h3{
+    position: absolute;
+    bottom: 2.5vw;
+    left: 1vw;
+
+    font-size: 2vw;
+}
+
+
+#ventana-flotante{
+    width: 100%;
+    height: 100%;
+    
+    position: fixed;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#fondo-negro{
+    background-color: #122022c0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#contenido-ventana{
+    width: 75vw;
+    height: 90vh;
+    background-color: #FFEEDB;
+    border-radius: 16px;
+
+    z-index: 12;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+
+}
+#contenedor-imagen{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position-y: 50%;
+}
+
+#contenedor-contenido{
+    display: grid;
+    grid-template-rows: 0.1fr 0.3fr 1fr;
+
+    justify-items: center;
+    text-align: center;
+}
+
+#contenedor-contenido p {
+    padding: 10%;
+    font-size: 40px;
+    font-family: "Rosario";
+}
+
+#contenedor-contenido img{
+    width: 30px;
+    justify-self: flex-end;
+    margin: 30px;
+}
+
+#contenedor-contenido img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#contenedor-contenido h3{
+    align-self: flex-end;
+    font-size: 120px;
+    font-family: "Italianno";
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1700px){
+    #contenido-ventana{
+        width: 85vw;
+    }
+}
+
+@media (max-width: 1000px){
+    #contenido-ventana{
+        display: grid;
+        grid-template-rows: 90% 20%;
+        grid-template-columns: 1fr;
+
+        overflow: scroll;
+    }
+
+    #contenido-ventana h3{
+        font-size: 80px;
+    }
+
+    #contenido-ventana p{
+        font-size: 35px;
+        justify-self: flex-start;
+    }
+
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+    #contenido-ventana{
+        width: 80vw;
+    }
+
+    #iconos > div > p{
+        font-size: 20px;
+        padding: 0 0;
+    }
+
+    #contenido{
+        width: 100%;
+        margin: 0;
+    }
+
+    #contenido h2{
+        font-size: 70px;
+    }
+    #iconos .icono{
+        width: 70px;
+    }
+
+    .selector-icono{
+        width: 15vw;
+    }
+
+    #arpa{
+        top: 52vw;
+    }
+
+    #arpa h3{
+        bottom: 0;
+    }
+
+    #flauta1{
+        top: 40vw;
+        left: 30vw;
+    }
+    
+    #trompeta1{
+        top: 25vw;
+        left: 17vw;
+    }
+    
+    #percusion1{
+        top: 7vw;
+        left: 30vw;
+    }
+    
+    #percusion2{
+        top: 7vw;
+        left: 52vw;
+    }
+    
+    #trompeta2{
+        top: 25vw;
+        left: 65vw;
+    }
+    
+    #flauta2{
+        top: 40vw;
+        left: 50vw;
+    }
+    
+    #contrabajo{
+        top: 52vw;
+        left: 70vw;
+    }
+
+    #inicio{
+        height: 800px;
+    }
+
+    #arpa h3, #flauta1 h3, #flauta2 h3, #trompeta1 h3, #trompeta2 h3, #percusion1 h3, #percusion2 h3, #contrabajo h3{
+        position: absolute;
+        bottom: 0;
+        left: 3vw;
+    
+        font-size: 2vw;
+    }
+
+    #inicio h1{
+        font-size: 70px;
+        padding-top: 340px;
+    }
+
+    .selector-icono{
+        height: 18vw;
+    }
+}
+
+
+@media (max-height: 900px) {
+    #contenedor-contenido {
+        overflow: scroll;
+    }
+}
+
+
+@media (max-width: 1200px) and (min-width: 800px) {
+    #iconos > div > p{
+        font-size: 20px;
+    }
+
+    #contenido-ventana{
+        width: 85vw;
+    }
+}
+
+
+
+
