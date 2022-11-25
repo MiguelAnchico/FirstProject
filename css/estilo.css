@@ -237,6 +237,10 @@ body{
     background-position-y: 50%;
 }
 
+#contenedor-imagen:hover {
+    cursor: pointer;
+}
+
 #contenedor-contenido{
     display: grid;
     grid-template-rows: 0.1fr 0.3fr 1fr;
