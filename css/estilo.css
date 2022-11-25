@@ -235,9 +235,7 @@ body{
     height: 100%;
     background-size: cover;
     background-position-y: 50%;
-}
 
-#contenedor-imagen:hover {
     cursor: pointer;
 }
 
