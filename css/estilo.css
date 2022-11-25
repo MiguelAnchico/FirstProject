@@ -219,7 +219,7 @@ body{
 
 #contenido-ventana{
     width: 75vw;
-    height: 90vh;
+    height: 40vw;
     background-color: #FFEEDB;
     border-radius: 16px;
 
@@ -241,14 +241,15 @@ body{
 
 #contenedor-contenido{
     display: grid;
-    grid-template-rows: 0.1fr 0.3fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr;
 
     justify-items: center;
     text-align: center;
 }
 
 #contenedor-contenido p {
-    padding: 10%;
+    padding: 16px 32px;
+    text-align: justify;
     font-size: 40px;
     font-family: "Rosario";
 }
@@ -272,16 +273,10 @@ body{
 
 
 
-
-
-
-
-
-
-
 @media (min-width: 1200px) and (max-width: 1700px){
     #contenido-ventana{
         width: 85vw;
+        height: 800px;
     }
 }
 
@@ -292,6 +287,7 @@ body{
         grid-template-columns: 1fr;
 
         overflow: scroll;
+        height: 650px;
     }
 
     #contenido-ventana h3{
@@ -306,13 +302,10 @@ body{
 }
 
 
-
-
-
-
 @media (max-width: 800px) {
     #contenido-ventana{
         width: 80vw;
+        height: 650px;
     }
 
     #iconos > div > p{
@@ -402,13 +395,6 @@ body{
 }
 
 
-@media (max-height: 900px) {
-    #contenedor-contenido {
-        overflow: scroll;
-    }
-}
-
-
 @media (max-width: 1200px) and (min-width: 800px) {
     #iconos > div > p{
         font-size: 20px;
@@ -416,6 +402,7 @@ body{
 
     #contenido-ventana{
         width: 85vw;
+        height: 650px;
     }
 }
 
